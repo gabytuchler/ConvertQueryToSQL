@@ -2,7 +2,7 @@
 ## Task List & Estimated Hours (Technical Evaluation)
 
 ## Week of Nov 30 – Dec 6
-**Estimated time:**   one hour
+**Estimated time:**   2 hours
 - Setup repository.
 - Create a fork on GitHub
 - Install Python
@@ -16,7 +16,7 @@
 - Follow the flow of the code
 
 ### Set up and run the project locally  
-**Estimated time:** 
+**Estimated time:** 3 hours
 - Create virtual environment  
 - Install dependencies  
 - Resolve library version issues  
