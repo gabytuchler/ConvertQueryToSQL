@@ -1,8 +1,8 @@
 import sqlglot
 from typing import Tuple, Set
 
-DISALLOWED = {"insert","update","delete","drop","alter","create","replace","attach","detach","truncate","pragma","vacuum","merge"}
-ALLOWED_STATEMENTS = {"select"}
+DISALLOWED = {"update","delete","drop","alter","create","replace","attach","detach","truncate","pragma","vacuum","merge"}
+ALLOWED_STATEMENTS = {"select","insert"}
 
 def extract_tables(sql: str) -> Set[str]:
     try:
@@ -15,7 +15,7 @@ def extract_tables(sql: str) -> Set[str]:
 def validate_sql(sql: str, allowed_tables: Set[str]) -> Tuple[bool, str]:
     if ";" in sql:
         return False, "semicolon or multiple statements not allowed"
-    low = sql
+    low = sql.lower()
     for kw in DISALLOWED:
         if f" {kw} " in f" {low} ":
             return False, f"disallowed keyword: {kw}"

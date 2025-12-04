@@ -31,15 +31,26 @@ retriever = vectordb.as_retriever(search_kwargs={"k": TOP_K})
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
 
 sql_prompt = PromptTemplate.from_template("""
-        You are a SQL generator. Based on the following context, generate a SINGLE READ-ONLY SQLite SELECT query (no semicolons, no multiple statements).
+        You are a SQL generator for a SQLite database.
+
+        Based on the following context and the user's question, generate a SINGLE SQLite query
+        (no semicolons, no multiple statements).
+
+        - If the user asks to view / get / list / count data → generate a SELECT statement.
+        - If the user asks to add / insert / create a new row → generate an INSERT statement.
+
+        Use only tables and columns that appear in the context.
+        Do NOT generate UPDATE, DELETE, DROP or any DDL.
+
         Context:
         {context}
-        
+
         Question:
         {question}
-        
-        Return only the SQL SELECT statement.
+
+        Return only the SQL statement.
         """)
+
 
 
 async def retriever_node(state: RAGState) -> RAGState:
@@ -74,12 +85,12 @@ async def sql_generator_node(state: RAGState) -> RAGState:
     # 5. Remove code fences ``` or ```sql and any leading/trailing whitespace
     out = re.sub(r"```(?:sql)?\n?", "", out, flags=re.IGNORECASE).replace("```", "").strip()
 
-    # 6. Ensure the SQL starts with SELECT (case-insensitive)
-    match = re.search(r"(select\b.*)", out, flags=re.IGNORECASE | re.DOTALL)
+      # 6. Extract a single SQL statement that starts with SELECT or INSERT
+    match = re.search(r"\b(select|insert)\b.*", out, flags=re.IGNORECASE | re.DOTALL)
     if match:
-        out = match.group(1).strip()
+        out = match.group(0).strip()
     else:
-        # fallback if no SELECT found
+        # fallback if no SELECT/INSERT found
         out = ""
 
     # 7. Optional: remove trailing semicolon if present
