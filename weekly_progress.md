@@ -34,4 +34,23 @@
 - Test with your own examples 
 - Debug issues  
 
-### Total hours: 15 hours
+
+### Tasks worked on & actual hours spent
+-Cloned the ConvertQueryToSQL repository and created a local working copy – 1 hour
+-Set up Python on my machine and fixed path issues (reinstalling version, verifying environment) – 2 hours
+-Created a virtual environment and installed the required dependencies – 1 hour
+-Resolved missing-folder and file-visibility issues in VS Code (understanding why only LICENSE/readme appeared, fixing folder structure,understanding shallow clone behavior) – 1 hour
+-Studied the Medium article and examined the system architecture (LangChain → embeddings → Chroma → FastAPI → SQL executor) – 3 hours
+-Ran the server locally, tested endpoints, checked errors with API key and configuration, fixed `.env` formatting and model naming issues – 2 hours
+-Explored the code flow: how queries are embedded → retrieved → parsed → executed in SQLite – 2 hours
+-Investigated SQL parsing logic, especially SELECT handling – 1 hour
+-extend functionality to support INSERT statements (initial exploration and planning where to implement it) - 1 hour
+- Documented blockers and open questions – 0.5 hour
+
+
+
+
+
+
+
+
