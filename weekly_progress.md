@@ -47,6 +47,10 @@
 - extend functionality to support INSERT statements (initial exploration and planning where to implement it) - 1 hour
 - Documented blockers and open questions – 0.5 hour
 
+###  Blockers / Open Questions
+- Would like clarification on how LangChain calls flow into our FastAPI endpoints.
+- Need clarification on which parts of the codebase are considered stable/core and which parts are expected to change when extending the system.
+- Would appreciate clarification on whether the place where I implemented the initial INSERT functionality is aligned with the intended architecture, and if this is the correct module to extend for this feature.
 
 
 
