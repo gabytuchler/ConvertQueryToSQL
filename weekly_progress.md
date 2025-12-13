@@ -69,7 +69,7 @@ Over the weekend, I focused on progressing INSERT support, validating basic end-
 
 ---
 
-#### SQL validation and safety (2 hours)
+#### SQL validation and safety (3 hours)
 - Performed an initial update of SQL validation rules to allow INSERT statements.
 - Added basic structural checks for valid SQL.
 - Improved error messages returned by the API for failed queries.
@@ -91,7 +91,7 @@ Over the weekend, I focused on progressing INSERT support, validating basic end-
 ---
 
 ### Total Time Spent
-** 8.5 hours**
+** 9 hours**
 
 ---
 
