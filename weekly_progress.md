@@ -53,6 +53,60 @@
 - Would appreciate clarification on whether the place where I implemented the initial INSERT functionality is aligned with the intended architecture, and if this is the correct module to extend for this feature.
 
 
+## Weekly Progress Update – Weekend Work (Dec 7 – Dec 13)
+
+### Summary
+Over the weekend, I focused on progressing INSERT support, validating basic end-to-end flow, and gaining a clearer understanding of the system architecture.
+
+---
+
+### Tasks Completed & Time Spent
+
+#### Progress on INSERT statement support (3 hours)
+- Implemented an initial version of INSERT support in the SQL translation layer.
+- Extended the executor logic to handle INSERT alongside existing SELECT functionality.
+- Added a basic separation between read (SELECT) and write (INSERT) operations.
+
+---
+
+#### SQL validation and safety (2 hours)
+- Performed an initial update of SQL validation rules to allow INSERT statements.
+- Added basic structural checks for valid SQL.
+- Improved error messages returned by the API for failed queries.
+- Ensured existing SELECT functionality remains unaffected.
+
+---
+
+#### Architecture review and flow understanding (3 hours)
+- Traced the full request flow: LangChain → FastAPI → SQL executor.
+- Identified core/stable components versus extension points in the codebase.
+- Evaluated whether the current INSERT implementation aligns with the overall architecture.
+
+---
+
+#### Documentation and reporting (0.5 hours)
+- Updated the weekly progress log.
+- Documented current limitations and open questions.
+
+---
+
+### Total Time Spent
+** 8.5 hours**
+
+---
+
+### Open Questions / Points for Clarification
+1. Which parts of the codebase should be considered stable core components and avoided when adding new SQL features (e.g., INSERT)?
+2. Is the current location of the INSERT implementation aligned with the long-term architecture of the system?
+3. Are there additional safety, validation, or permission requirements expected for write operations?
+4. Based on the Medium article, the RAG-related work (LangChain setup, embeddings, retrieval, validation) is a broader effort that may span multiple weeks and require significant cumulative time, rather than being completed within a single weekend of ~10 hours. I would appreciate clarification on the expected scope and depth at this stage.
+
+I would also appreciate clearer, more concrete task definitions or milestones to help better guide my work and ensure alignment with expectations. 
+
+---
+
+
+
 
 
 
