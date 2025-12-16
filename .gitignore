@@ -5,3 +5,11 @@ __pycache__/
 chroma_persist/
 *.sqlite3
 .DS_Store
+
+.DS_Store
+__pycache__/
+*.pyc
+chroma_persist/
+*.sqlite3
+.venv/
+.env
