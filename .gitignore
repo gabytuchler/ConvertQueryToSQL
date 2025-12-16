@@ -4,3 +4,4 @@ __pycache__/
 .env
 chroma_persist/
 *.sqlite3
+.DS_Store
