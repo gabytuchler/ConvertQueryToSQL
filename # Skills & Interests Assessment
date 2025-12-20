@@ -1,0 +1,325 @@
+# Skills & Interests Assessment
+
+## Studies
+
+**University / Program**  
+Undergraduate student in a program combining Computer Science and Mathematics, with an introductory course in Neuroscience.
+
+**Since when are you enrolled?**  
+Since the beginning of my undergraduate studies (first year).
+
+### Current courses
+- Discrete Mathematics  
+- Introduction to Computer Science  
+- Linear Algebra  
+- Calculus (Infinitesimal Calculus)  
+- Introduction to Brain Research  
+
+### Relevant courses and practical work
+
+**Discrete Mathematics**  
+Proof-based assignments covering logic, mathematical induction, combinatorics, functions and relations (injective and surjective), and formal mathematical reasoning.
+
+**Introduction to Computer Science**  
+Weekly programming assignments in Java, including writing functions and algorithms, working with loops, arrays, conditionals, error handling, and algorithmic thinking.
+
+**Linear Algebra**  
+Computational and proof-based exercises involving vector spaces, linear independence and dependence, bases, dimensions, matrices, and solving systems of linear equations.
+
+**Calculus (Infinitesimal Calculus)**  
+Exercises on limits, sequences, and functions, combining computational practice with theoretical understanding.
+
+**Introduction to Brain Research**  
+A mainly theoretical course covering basic concepts in neuroscience, neural systems, and the relationship between brain structure and function.
+
+---
+
+## Work Environment
+
+**Operating System**  
+macOS (MacBook)
+
+**Editor / IDE**  
+No fixed preferred editor yet. I am still exploring different editors and IDEs as part of my studies.
+
+**Terminal / Shell Experience**  
+Basic to intermediate experience working with the terminal, gained through my university studies and some limited prior exposure during military service.
+
+---
+
+## Strongest Technical Skill
+
+Strong analytical and mathematical reasoning, especially in proof-based problem solving and structured thinking.
+
+## One Area I Clearly Want to Improve
+
+Building deeper practical experience in software development, including working with tools, larger codebases, and development workflows.
+
+---
+
+## 1) Self-Assessment (with Evidence)
+
+### Backend / Programming Languages
+
+#### Python
+- **Skill level:** 3  
+- **What I used:** Used Python for data analysis tasks during military service, including processing datasets, writing analysis scripts, and extracting insights from structured data.
+- **Libraries / frameworks:** Standard Python libraries for data processing and analysis. 
+- **Time / frequency:** Used regularly over an extended period.  
+- **Notes:** Due to the military context, I cannot share code or GitHub links, and the work was not part of a civilian project.
+
+#### Java
+- **Skill level:** 2  
+- **What I used:** Completed multiple programming assignments as part of university coursework and earlier experience in high school, focusing on core programming concepts.
+- **Libraries / frameworks:** Standard Java.  
+- **Time / frequency:** Weekly assignments during current studies.
+
+#### HTML & CSS
+- **Skill level:** 1  
+- **What I built:** Basic static pages and small exercises.  
+- **Challenges:** Layout structuring and responsive design.
+
+#### SQL
+- **Skill level:** 4  
+- **What I used:** Extensive use of SQL during military service for data analysis tasks, including querying large datasets, joining tables, filtering, aggregations, and supporting analytical workflows.
+- **Time / frequency:** Used intensively over a long period.  
+- **Notes:** Work performed in a classified military environment; cannot share queries or repositories.
+
+#### REST APIs
+- **Skill level:** 1  
+- **Experience:** Basic familiarity through coursework and self-study.
+
+---
+
+## 2) Practical Knowledge Check (Short Explanations)
+
+### Practical Knowledge Check (Short Explanations)
+1. Git
+- ** Difference between commit, push, and pull request :
+  A commit records changes locally in the project history,push uploads those commits to a remote repository (e.g. GitHub),
+  and a pull request is a request to merge changes from one branch into another after review.
+- ** What is a feature branch and why it is used :
+  A feature branch is a separate branch created to develop a specific feature or fix, allowing isolated work without affecting the main branch until the change is ready.
+- ** What to do if you accidentally committed .env or __pycache__ :
+  Remove the file from Git tracking, add it to .gitignore, and if necessary remove it from the repository history so it is no longer tracked.
+
+
+2. Python Backend
+- **Use of validation and response models in FastAPI :
+  FastAPI uses Pydantic models to validate incoming request data and to return structured, typed responses.
+- **Why code works locally but fails in CI :
+  Common reasons include missing environment variables, different Python versions, missing dependencies, incorrect paths, or reliance on local state not present in CI.
+- **Sync vs async :
+  Synchronous code blocks execution until a task completes,while asynchronous code allows handling multiple I/O-bound tasks concurrently without blocking.
+
+
+### Node.js
+- **Current level:** No hands-on experience yet.  
+- **Knowledge:** Basic theoretical understanding of Promises, async/await, event loop.  
+- **Learning:** Strong motivation to learn backend development with Node.js.
+
+
+### SQL
+-**Query: sum of user orders in the last 30 days
+  This can be done using SUM() with a WHERE clause filtering by user ID, a 30-day date range, and additional conditions such as order status.
+-**Difference between index and constraint:
+  An index is used to improve query performance,while a constraint is used to enforce data integrity (e.g. primary key, uniqueness, foreign keys).
+-**Why SQL injection is dangerous and how it is prevented :
+  I do not yet have hands-on experience dealing with SQL injection in practice.
+  At a general level, I understand that it allows malicious code to be injected into SQL queries, and that it is typically prevented using parameterized queries rather than string concatenation.
+  I am interested in learning and practicing this topic in more depth.
+
+
+### MongoDB
+-**When to choose MongoDB over SQL:
+  I do not yet have practical experience working with MongoDB.
+  At a theoretical level, I understand that MongoDB is suitable when the data schema is flexible or frequently changing, or when working with hierarchical data that does not fit well into a relational model.
+  I am willing to invest time in learning and applying it in practice.
+-**Example of an index:
+  I do not yet have hands-on experience creating indexes in MongoDB.
+  At a general level, I understand that indexing frequently queried fields (such as userId) improves query performance, and I am interested in learning this practically.
+
+
+### Frontend
+-**Controlled vs uncontrolled inputs :
+  I do not yet have hands-on experience working with controlled and uncontrolled inputs.
+  At a general level, I understand that they represent different ways of managing form inputs (via application state or directly via the DOM), and I am interested in learning and practicing this.
+-**What is CORS and where it is handled:
+  I do not yet have hands-on experience dealing with CORS.
+  At a general level, I understand that it is a security mechanism for cross-origin requests and that it is typically handled on the server side via appropriate configuration.
+  I am willing to invest time in learning and applying this in practice.
+-**Calling an API and handling errors:
+  An API call is sent to the server, the response status is checked, successful data is handled appropriately, and errors are handled in failure cases.
+---
+
+## 3) Architecture Understanding – RAG / ConvertQueryToSQL
+
+**Personal note (transparency):**  
+This is an area where I still need significant clarification and practice. I understand the overall flow at a high level, but I currently find it challenging to reason about all components and trade-offs independently. I would benefit from guided examples and hands-on iteration to deepen my understanding.
+
+### High-level Flow Description
+
+1. **Question** – The user submits a natural-language question.  
+2. **Embedding** – The question is converted into a vector representation capturing its semantic meaning.  
+3. **Retrieval** – Relevant documents or chunks are retrieved from a vector store based on similarity.  
+4. **LLM** – The LLM receives the user question together with the retrieved context.  
+5. **SQL Generation** – The LLM generates a candidate SQL query.  
+6. **Validation** – The generated SQL is validated (syntax, schema compatibility, allowed operations).  
+7. **Execution** – The validated SQL is executed against the database in a controlled manner.  
+8. **Answer** – Results are returned to the user, often with a short explanation or formatted output.
+
+### Where I Would Add Logging
+
+1. **Request intake** – request ID, timestamp, and user query .  
+2. **Embedding step** – model name, latency, success/failure, and input size.  
+3. **LLM call** – prompt version, model used, token usage, latency, and API errors.  
+4. **Validation step** – pass/fail result and reason for failure .  
+5. **Execution** – query runtime, row count, database errors, and timeouts.  
+6. **Final response** – success/failure status and high-level response metadata.
+
+### Common RAG Failure Modes and How to Detect / Prevent Them
+
+**Note:**  
+This is an area where my understanding is still mostly conceptual. I am aware of the common failure modes at a high level, but I do not yet feel confident reasoning about their detection and mitigation independently, and I would need further guidance and hands-on practice.
+
+1. **Irrelevant retrieval (incorrect context is retrieved)**  
+   - **Current understanding:** I understand at a high level that the system may retrieve chunks that are not truly relevant to the user query.  
+   - **How it is typically detected:** By inspecting logs of retrieved chunks and their similarity scores, and by manually testing representative queries.  
+   - **How it is typically mitigated:** By improving chunking strategies, tuning Top-K, applying metadata filtering, improving embeddings, or adding a reranker.  
+   - **Personal note:** I have not yet implemented or debugged this in practice and would need guidance to apply these techniques correctly.
+
+2. **Hallucinated or invalid SQL (schema mismatch)**  
+   - **Current understanding:** I understand that the LLM may generate SQL that references non-existing tables or columns.  
+   - **How it is typically detected:** Through validation against the database schema, SQL parsing, or dry-run / explain steps where available.  
+   - **How it is typically mitigated:** By injecting only the relevant schema into the prompt, enforcing strict response formats, and applying strong validation rules.  
+   - **Personal note:** My understanding here is theoretical, and I have not yet worked with schema validation in a real RAG pipeline.
+
+3. **Prompt or context mismatch (noisy or unclear context)**  
+   - **Current understanding:** I understand that overly long or poorly structured context can confuse the LLM and degrade results.  
+   - **How it is typically detected:** By comparing different prompt versions (e.g. A/B testing) and monitoring failure rates and LLM latency or cost.  
+   - **How it is typically mitigated:** By reducing context to only what is relevant, clarifying instructions, enforcing structured outputs, and adding intermediate self-check steps.  
+   - **Personal note:** This is currently the area I find hardest to reason about, and I would benefit from concrete examples and iteration to build confidence.
+
+## Interests and Motivation
+
+### Technical areas that interest me (3)
+
+1. **Backend**  
+I am interested in backend work because I like understanding how things work behind the scenes and how data flows through a system, even if I am still at an early learning stage.
+
+2. **Data / SQL**  
+I find data-related tasks interesting, especially working with SQL and understanding how information can be queried and analyzed.
+
+3. **AI / RAG Systems (Curiosity level)**  
+I am curious about AI-based systems such as RAG. I do not have deep knowledge yet, but I find the idea interesting and would like to gradually understand how these systems are built.
+
+---
+
+### What I would like to know in 3 months
+
+In three months, I would like to:
+- Feel more comfortable working with backend code.
+- Have basic practical experience with APIs and Node.js.
+- Better understand how RAG systems work at a high level.
+- Be more confident reading and navigating an existing codebase.
+
+---
+
+### Preferred orientation
+
+- **Backend / Data** – primary interest  
+- **Full-stack** – open to learning, mainly backend-focused  
+- **Frontend** – less focus, but willing to learn basics if needed
+
+---
+
+### Less preferred tasks
+
+I am less enthusiastic about:
+- Heavy UI or design-focused tasks.
+That said, I am open to doing these tasks when they are part of a larger learning process or needed to complete a project.
+
+---
+## 5) Use of AI (Full Transparency)
+
+### Do you use AI? Why?
+Yes, I use AI as a learning and support tool.  
+I mainly use it to understand new concepts, clarify technical explanations, and help structure my thoughts when working on unfamiliar topics.
+
+### How do you validate AI answers?
+I do not treat AI answers as authoritative by default.  
+I try to validate them by:
+- Comparing with course material or official documentation
+- Checking logical consistency
+- Testing ideas with small examples or code
+- Asking follow-up questions when something is unclear
+
+### Example of meaningful help from AI
+AI has helped me significantly in structuring explanations and understanding complex topics at a high level (for example, backend concepts, SQL logic, or system architecture), especially when I lacked a clear starting point.
+
+### Example of bias or mistake
+I have encountered cases where AI responses were too confident but incorrect or oversimplified.  
+This made me more careful about trusting answers blindly and reinforced the need to verify and think independently.
+
+### Did you use AI when answering this questionnaire?
+Yes, I used AI as a support tool to help with wording, structure, and understanding the questions.  
+All answers reflect my own experience, knowledge level, and honest self-assessment.
+
+## Mini Case – Option B: SQL Translator
+
+### Problem
+Given a natural-language question from a user, the system should translate it into a valid SQL query, execute it safely, and return the result.
+
+### High-level approach
+- Receive a user question in natural language.
+- Use an LLM to generate a candidate SQL query based on the question and the database schema.
+- Validate the generated SQL to ensure it is safe and compatible with the schema.
+- Execute the query on the database.
+- Return the results to the user in a readable format.
+
+### Key challenges (from my perspective)
+- Making sure the generated SQL matches the actual database schema.
+- Preventing invalid or unsafe queries.
+- Handling cases where the LLM generates incorrect or incomplete SQL.
+- Understanding how much context (schema, examples) to provide to the model.
+
+### How I would approach debugging issues
+- Log the original user question and the generated SQL.
+- Check whether the SQL passes validation before execution.
+- Compare the generated SQL with expected queries for similar questions.
+- Simplify the prompt or reduce context if the output is inconsistent.
+
+### Personal note
+I do not yet have full hands-on experience implementing this end-to-end.  
+My understanding is mostly high-level, and I would need guidance and practice to implement this reliably.  
+However, I find this problem interesting because it combines SQL, backend logic, and AI in a practical way, and I would like to improve my understanding through hands-on work.
+
+## 7) Final Questions
+
+### Which parts were challenging?
+The most challenging parts were the architectural topics, especially RAG systems and understanding how different components connect end-to-end.  
+I also found it harder to answer questions that required experience-based judgment rather than theoretical understanding.
+
+### What kind of support would help you progress?
+Clear explanations, concrete examples, and small, focused tasks would help me the most.  
+Having guidance on how to approach problems step by step, and occasional feedback on my understanding, would make learning more effective.
+
+### Are there areas where you would like more responsibility?
+At this stage, I would be happy to gradually take more responsibility in backend or data-related tasks, especially ones that allow learning through practice.  
+I prefer starting with well-scoped tasks and increasing responsibility as my confidence and understanding grow.
+
+
+
+
+## Time Spent
+
+I spent approximately 4 hours working on this document.  
+This time includes reading and understanding the questions, reflecting on my experience, and organizing clear and structured answers.
+
+
+
+
+
+
+
+
